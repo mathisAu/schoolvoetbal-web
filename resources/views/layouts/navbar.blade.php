@@ -10,19 +10,20 @@
 
     <!-- Navbar -->
     <nav class="bg-blue-600 text-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+        <div class="max-w-7xl mx-auto px-12 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="/" class="text-2xl font-bold">🏫 Football Club</a>
+                    <img src="{{ asset('/images/fotovoetbal.jpg') }}" alt="Football Logo" class="h-30 w-40">
+
                 </div>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="/" class="hover:text-blue-300 transition">Home</a>
-                    <a href="/dashboard" class="hover:text-blue-300 transition">Dashboard</a>
-                    <a href="#" class="hover:text-blue-300 transition">About</a>
-                    <a href="#" class="hover:text-blue-300 transition">Contact</a>
+                    <a href="/dashboard" class="hover:text-blue-300 transition">Wedstrijden</a>
+                    <a href="#" class="hover:text-blue-300 transition">Teams</a>
+                    <a href="#" class="hover:text-blue-300 transition">Inschrijven</a>
 
                     <!-- Inlogstatus en uitlog knop -->
                     @auth
@@ -59,9 +60,9 @@
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-4 pt-2 pb-3 space-y-1">
                 <a href="/" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">Home</a>
-                <a href="/dashboard" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">Dashboard</a>
-                <a href="#" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">About</a>
-                <a href="#" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">Contact</a>
+                <a href="/dashboard" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">wedstrijden</a>
+                <a href="#" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">Teams</a>
+                <a href="#" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">Inschrijven</a>
 
                 @auth
                     <!-- Welkomstbericht in mobiele weergave -->
