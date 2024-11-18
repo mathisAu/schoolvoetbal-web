@@ -1,9 +1,11 @@
+<!-- resources/views/teams/index.blade.php -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Teams</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
@@ -42,28 +44,22 @@
                     @endauth
                 </div>
 
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-white focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
     <main class="min-h-screen">
-        @yield('content')
+        <h1 class="text-4xl font-bold text-center my-8">Teams</h1>
+        <div class="container mx-auto px-4 py-8">
+            @foreach ($teams as $team)
+                <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+                    <h2 class="text-xl font-semibold">{{ $team->name }}</h2>
+                    <p>{{ $team->description }}</p>
+                </div>
+            @endforeach
+        </div>
     </main>
 
-    <script>
-        const menuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
 </body>
 </html>
