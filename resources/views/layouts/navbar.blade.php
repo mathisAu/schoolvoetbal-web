@@ -15,15 +15,14 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <img src="{{ asset('/images/fotovoetbal.jpg') }}" alt="Football Logo" class="h-30 w-40">
-
                 </div>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="/" class="hover:text-blue-300 transition">Home</a>
-                    <a href="/dashboard" class="hover:text-blue-300 transition">Wedstrijden</a>
-                    <a href="#" class="hover:text-blue-300 transition">Teams</a>
-                    <a href="#" class="hover:text-blue-300 transition">Inschrijven</a>
+                    <a href="/" class="text-white hover:text-blue-300 transition">Home</a>
+                    <a href="/dashboard" class="text-white hover:text-blue-300 transition">Wedstrijden</a>
+                    <a href="{{ route('teamspage') }}" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md">Teams</a>
+                    <a href="#" class="text-white hover:text-blue-300 transition">Inschrijven</a>
 
                     <!-- Inlogstatus en uitlog knop -->
                     @auth
@@ -41,6 +40,10 @@
                         <!-- Login knop -->
                         <a href="/login" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200 transition">
                             Login
+                        </a>
+                        <!-- Register link (optioneel) -->
+                        <a href="/register" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200 transition">
+                            Register
                         </a>
                     @endauth
                 </div>
@@ -60,8 +63,8 @@
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-4 pt-2 pb-3 space-y-1">
                 <a href="/" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">Home</a>
-                <a href="/dashboard" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">wedstrijden</a>
-                <a href="#" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">Teams</a>
+                <a href="/dashboard" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">Wedstrijden</a>
+                <a href="{{ route('teamspage') }}" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">Teams</a>
                 <a href="#" class="block text-white hover:bg-blue-700 px-3 py-2 rounded-md">Inschrijven</a>
 
                 @auth
@@ -79,6 +82,10 @@
                     <!-- Login knop in mobiele weergave -->
                     <a href="/login" class="block text-blue-600 bg-white hover:bg-gray-200 px-3 py-2 rounded-md">
                         Login
+                    </a>
+                    <!-- Register link in mobile menu -->
+                    <a href="/register" class="block text-blue-600 bg-white hover:bg-gray-200 px-3 py-2 rounded-md">
+                        Register
                     </a>
                 @endauth
             </div>
