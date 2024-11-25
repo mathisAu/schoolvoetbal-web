@@ -64,4 +64,34 @@ class TeamController extends Controller
         // Geef de teams door aan de view
         return view('teams.index', compact('teams'));
     }
+
+    // app/Http/Controllers/TeamController.php
+
+
+    // Toon alle teams voor de API
+    public function getAllTeams()
+    {
+        // Haal alle teams op
+        $teams = Team::all();
+
+        // Geef de teams als JSON terug
+        return response()->json($teams);
+    }
+
+    // Toon een specifiek team voor de API
+    public function getTeamById($id)
+    {
+        // Haal het team op op basis van de id
+        $team = Team::find($id);
+
+        // Controleer of het team bestaat
+        if (!$team) {
+            return response()->json(['error' => 'Team niet gevonden'], 404);
+        }
+
+        // Geef het team als JSON terug
+        return response()->json($team);
+    }
 }
+
+
