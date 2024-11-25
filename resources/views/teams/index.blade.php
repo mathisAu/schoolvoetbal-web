@@ -25,7 +25,6 @@
                     <a href="/dashboard" class="text-white hover:text-blue-300 transition">Wedstrijden</a>
                     <a href="{{ route('teams.index') }}" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md">Teams</a>
                     <a href="#" class="text-white hover:text-blue-300 transition">Inschrijven</a>
-
                     @auth
                         <span class="text-sm">Dankjewel voor het inloggen, {{ Auth::user()->name }}!</span>
                         <form action="/logout" method="POST" class="ml-4">
@@ -43,7 +42,6 @@
                         </a>
                     @endauth
                 </div>
-
             </div>
         </div>
     </nav>
