@@ -30,7 +30,7 @@
 
                         <!-- Dropdown Menu -->
                         <div
-                            class="absolute hidden group-hover:flex flex-col bg-white text-blue-600 mt-2 rounded shadow-lg py-2 z-10">
+                            class="absolute hidden group-hover:flex flex-col bg-white text-blue-600 rounded shadow-lg py-2 z-10">
                             <a href="/speelschema" class="block px-4 py-2 hover:bg-gray-200">Schema</a>
                             <a href="/speelschema/genereren" class="block px-4 py-2 hover:bg-gray-200">Genereren</a>
                             <a href="/speelschema/scores" class="block px-4 py-2 hover:bg-gray-200">Scores</a>
