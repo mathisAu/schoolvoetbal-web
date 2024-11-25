@@ -34,13 +34,15 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
+
+// Toon inlogformulier
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
+
+// Verwerk inlog via web
+Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
+
+// Uitloggen via web
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
-
-
-
 
 
 // Toon het inschrijvingsformulier
@@ -50,13 +52,7 @@ Route::get('/inschrijven', [InscriptionController::class, 'showForm'])->name('in
 Route::post('/inschrijven', [InscriptionController::class, 'storeInscription'])->name('inscription.store');
 
 
-
-
-
-
 // routes/web.php
-
-
 
 Route::get('/', function () {
     return view('homepage');
