@@ -19,26 +19,25 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="/" class="text-white hover:text-blue-300 transition">Home</a>
+                    <a href="/" class="text-white hover:text-blue-300 hover:bg-blue-700 px-3 py-2 rounded-md transition">Home</a>
 
                     <!-- Dropdown for Speelschema -->
                     <div class="relative group">
                         <!-- Button -->
-                        <button class="text-white hover:text-blue-300 transition focus:outline-none">
+                        <button class="text-white hover:text-blue-300 hover:bg-blue-700 px-3 py-2 rounded-md transition focus:outline-none">
                             Speelschema
                         </button>
 
                         <!-- Dropdown Menu -->
-                        <div
-                            class="absolute hidden group-hover:flex flex-col bg-white text-blue-600 rounded shadow-lg py-2 z-10">
+                        <div class="absolute hidden group-hover:flex flex-col bg-white text-blue-600 rounded shadow-lg py-2 z-10">
                             <a href="/speelschema" class="block px-4 py-2 hover:bg-gray-200">Schema</a>
                             <a href="/speelschema/genereren" class="block px-4 py-2 hover:bg-gray-200">Genereren</a>
                             <a href="/speelschema/scores" class="block px-4 py-2 hover:bg-gray-200">Scores</a>
                         </div>
                     </div>
 
-                    <a href="{{ route('teams.index') }}" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md">Teams</a>
-                    <a href="#" class="text-white hover:text-blue-300 transition">Inschrijven</a>
+                    <a href="{{ route('teams.index') }}" class="text-white hover:bg-blue-700 px-3 py-2  hover:text-blue-300 rounded-md">Teams</a>
+                    <a href="#" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md hover:text-blue-300 transition">Inschrijven</a>
 
                     @auth
                         <span class="text-sm">Dankjewel voor het inloggen, {{ Auth::user()->name }}!</span>
