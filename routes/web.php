@@ -56,7 +56,7 @@ Route::post('/inschrijven', [InscriptionController::class, 'storeInscription'])-
 
 Route::get('/', function () {
     return view('homepage');
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
