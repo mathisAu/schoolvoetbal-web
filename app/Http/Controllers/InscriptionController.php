@@ -3,6 +3,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Inschrijving;
 use Illuminate\Http\Request;
 use App\Models\Team;
 
@@ -25,7 +26,7 @@ class InscriptionController extends Controller
         ]);
 
         // Maak een inschrijving aan
-        $inscription = new Inscription();
+        $inscription = new Inschrijving();
         $inscription->user_id = auth()->user()->id;
         $inscription->team_id = $request->team_id; // Gebruik de ingevulde team_id
         $inscription->save();
