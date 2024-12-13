@@ -39,7 +39,7 @@ class TeamController extends Controller
             // Maak een nieuw team
             $team = Team::create([
                 'name' => 'Team ' . (Team::count() + 1), // Geef het team een naam, bijvoorbeeld "Team 1"
-                'description' => 'Nieuw team met 11 leden.',
+                
                 'image_url' => 'https://via.placeholder.com/300', // Voeg hier een afbeelding toe
             ]);
 

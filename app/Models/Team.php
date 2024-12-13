@@ -15,5 +15,6 @@ class Team extends Model
     protected $table = 'teams';
 
     // Je kunt de velden die massaal toewijsbaar zijn hier aangeven
-    protected $fillable = ['name', 'description', 'image_url'];
+    protected $fillable = ['name', 'points', 'creator_id'];
+
 }
