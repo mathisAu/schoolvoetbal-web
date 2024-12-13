@@ -64,5 +64,3 @@ Route::get('/dashboard', function () {
 
 // Team routes
 Route::get('/teams', [TeamController::class, 'index'])->name('teams.index');  // Verander hier naar 'teams.index'
-Route::get('/inschrijven', [TeamController::class, 'showForm'])->name('teams.inscription');
-Route::post('/inschrijven', [TeamController::class, 'storeInscription']);

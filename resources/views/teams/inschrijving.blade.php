@@ -1,7 +1,5 @@
 <!-- resources/views/teams/inschrijving.blade.php -->
-@extends('layouts.app')
-
-@section('content')
+<x-layouts.app>
     <div class="max-w-7xl mx-auto p-6">
         <h1 class="text-2xl font-bold mb-4">Inschrijven voor een Team</h1>
 
@@ -20,4 +18,4 @@
             <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Inschrijven</button>
         </form>
     </div>
-@endsection
+</x-layouts.app>
